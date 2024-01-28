@@ -5,14 +5,14 @@ public class Board {
 	private int columns;
 	private Piece[][] pieces;
 	
-	public Board(int rows, int columns, Piece[][] pieces) {
+	public Board(int rows, int columns) {
 		super();
 		this.rows = rows;
 		this.columns = columns;
 		pieces = new Piece [rows][columns];
 	}
 
-	int getRows() {
+	public int getRows() {
 		return rows;
 	}
 
@@ -20,7 +20,7 @@ public class Board {
 		this.rows = rows;
 	}
 
-	int getColumns() {
+	public int getColumns() {
 		return columns;
 	}
 
@@ -28,14 +28,12 @@ public class Board {
 		this.columns = columns;
 	}
 
-	Piece[][] getPieces() {
-		return pieces;
-	}
-
-	void setPieces(Piece[][] pieces) {
-		this.pieces = pieces;
+		
+	public Piece piece(int row, int column) {
+		return pieces [row][column];
 	}
 	
-	
-	
+	public Piece piece (Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 }
