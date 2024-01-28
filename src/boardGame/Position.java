@@ -5,10 +5,10 @@ public class Position {
 	private int row;
 	private int column;
 	
-	public Position(int i, int row) {
+	public Position(int row, int column) {
 		super();
-		this.column = i;
 		this.row = row;
+		this.column = column;
 	}
 
 	int getColumn() {
