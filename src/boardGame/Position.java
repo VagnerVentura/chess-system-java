@@ -15,7 +15,7 @@ public class Position {
 		return column;
 	}
 
-	void setColumn(char column) {
+	public void setColumn(int column) {
 		this.column = column;
 	}
 
@@ -23,8 +23,13 @@ public class Position {
 		return row;
 	}
 
-	void setRow(int row) {
+	public void setRow(int row) {
 		this.row = row;
+	}
+	
+	public void setValues (int row, int column) {
+		this.row = row;
+		this.column = column;
 	}
 
 	@Override
